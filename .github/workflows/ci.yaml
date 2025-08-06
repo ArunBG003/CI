@@ -21,13 +21,13 @@ jobs:
             go-version: 1.22
         
         - name: Build
-          run: 
+          run: |
             cd src/product-catalog
             go mod download
             go build -o product-catalog-service main.go
 
         - name: unit tests
-          run:
+          run: |
             cd src/product-catalog
             go test ./...
     
